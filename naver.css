@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 /* Cascading Style Sheet */
 /* 선택자(selector) */
 .blind {
@@ -26,12 +30,12 @@
     background-position: -4px -10px;
     background-repeat: no-repeat;*/
     background: url(./sp_search.png) -4px -10px no-repeat;
+    vertical-align: middle;
 }
 
 #header-search h1 span {
     display: none;
 }
-
 
 #header-search h2 {
     display: none;
@@ -47,5 +51,12 @@
     width: 521px;
     height: 49px;
     display: inline-block;
-    border: 2px solid #03cf5d;
+    border: 2px solid #03cf5d; /* hex */
+    vertical-align: middle;
+}
+
+#header-search fieldset input {
+    border: none;
+    padding: 0;
+    outline: none;
 }
