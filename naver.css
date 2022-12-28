@@ -423,6 +423,13 @@ main {
     vertical-align: top; 
 }
 
+#main-ytn h3, #main-newsstand h3 {
+    font-size: 14px;
+    font-family: NanumSquare,Dotum,"돋움",Helvetica,AppleSDGothicNeo,sans-serif;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
 #main-ytn{
     display: inline-block;
     width: 740px;
@@ -509,6 +516,7 @@ main {
 #main-shopping iframe {
     width: 100%;
     height: 100%;
+    border: none;
 }
 
 #main-third-block,
@@ -597,6 +605,15 @@ main {
     height: 45px;
 }
 
+#subject-all {
+    position: relative;
+    width: 45px;
+    border: none;
+    border-right: 1px solid #ebeef3;
+    background: white;
+
+}
+
 #subject-all, #subject-prev, #subject-next {
     position: relative;
     width: 45px;
@@ -637,4 +654,8 @@ main {
     background-image: url(./sp_themecast.png);
     background-repeat: no-repeat;
     background-position: -320px -52px;
+}
+
+section {
+    border: 1px solid #dee3eb;
 }
