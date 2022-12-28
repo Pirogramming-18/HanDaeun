@@ -29,9 +29,28 @@ html, body{
     height: 1px;
 }
 
+.relative {
+    position: relative;
+}
+
 .center-align {
     margin: 0 auto;
     width: 1080px;
+}
+
+#header-top {
+    float: right;
+}
+
+#header-top span {
+    color: #888;
+    letter-spacing: -1px;
+    font-size: 11px;
+    line-height: 22px;
+}
+
+#header-search {
+    clear: both;
 }
 
 #header-search a {
