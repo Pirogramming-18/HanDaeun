@@ -1,0 +1,6 @@
+/* Cascading Style Sheet */
+/* 선택자(selector) */
+#header-center {
+    margin: 0 auto;
+    width: 1080px;
+}
