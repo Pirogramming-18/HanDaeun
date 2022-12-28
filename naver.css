@@ -130,7 +130,6 @@ header {
     display: inline-block;
     margin: 0 6px;
     vertical-align: middle;
-
 }
 
 #search-history {
@@ -140,8 +139,7 @@ header {
     width: 9px;
     height: 4px;
     display: inline-block;
-    padding: 0 6px;
-    margin: 0 10px;
+    margin: 0 6px;
     vertical-align: middle;
 }
 
@@ -156,13 +154,13 @@ header {
 }
 
 nav {
-    display: inline-block;
     height: 46px;
     border-top: 1px solid #f1f3f6;
     border-bottom: 1px solid #d1d8e4;
 }
 
 nav ul {
+    display: inline-block;
     margin: 0;
     padding: 16px 0 0 4px;
     list-style: none;
@@ -212,8 +210,23 @@ nav li:nth-child(6) span:first-child {
 }
 
 nav li:nth-child(7) span:first-child{
-    width: 30px;
+    width: 35px;
     background-position: -125px -130px;
+}
+
+nav li:nth-child(8) span:first-child{
+    width: 26px;
+    background-position: -279px -208px;
+}
+
+nav li:nth-child(9) span:first-child{
+    width: 26px;
+    background-position: -128px -104px;
+}
+
+nav li:nth-child(10) span:first-child{
+    width: 26px;
+    background-position: -36px -259px;
 }
 
 nav li:nth-child(11) span:first-child{
@@ -223,22 +236,32 @@ nav li:nth-child(11) span:first-child{
 
 nav li:nth-child(12) span:first-child{
     width: 26px;
-    background-position: -234px -233px;
+    background-position: -279px -130px;
 }
 
 nav li:nth-child(13) span:first-child{
     width: 26px;
-    background-position: -72px -259px;
+    background-position: -234px -233px;
 }
 
 nav li:nth-child(14) span:first-child{
-    width: 13px;
-    background-position: -140px -78px;
+    width: 26px;
+    background-position: -72px -259px;
 }
 
 nav li:nth-child(15) span:first-child{
+    width: 13px;
+    background-position: -140px -78;
+}
+
+nav li:nth-child(16) span:first-child{
     width: 26px;
     background-position: -279px 0;
+}
+
+nav li.more:first-child span:first-child {
+    width: 55px;
+    background-position: 0 -104px;
 }
 
 .nav-divider {
@@ -261,11 +284,14 @@ nav li:nth-child(15) span:first-child{
     font-size: 16px;
 }
 
-main {
-    background-color: #f2f4f7;
-    overflow: auto;
+#rank-title {
+    letter-spacing: -1px;
+    font-size: 14px;
 }
 
-main h3:nth-of-type(2) {
-    background: red;
+
+main {
+    background-color: #f2f4f7;
+    display: inline-block;
+    width: 100%;
 }
