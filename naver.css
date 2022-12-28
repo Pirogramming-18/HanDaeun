@@ -14,18 +14,38 @@
     width: 1080px;
 }
 
-#header-search > h1 {
-    width: 280px;
-    display: inline-block;
+#header-search a {
+    text-decoration: none;
 }
 
-/*
-#header-center h1 {
-    자손 선택자
+#header-search h1 {
+    width: 198px;
+    height: 48px;
+    display: inline-block;
+    /*background-image: url(./sp_naver.png);
+    background-position: -4px -10px;
+    background-repeat: no-repeat;*/
+    background: url(./sp_search.png) -4px -10px no-repeat;
 }
-*/
+
+#header-search h1 span {
+    display: none;
+}
+
+
+#header-search h2 {
+    display: none;
+}
 
 #header-search fieldset{
-    width: 520px;
+    margin-left: 20px;
+    /*padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 10px;
+    padding-right: 0px;*/
+    padding: 12px 0px 12px 10px;
+    width: 521px;
+    height: 49px;
     display: inline-block;
+    border: 2px solid #03cf5d;
 }
