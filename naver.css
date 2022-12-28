@@ -29,8 +29,10 @@
     /*background-image: url(./sp_naver.png);
     background-position: -4px -10px;
     background-repeat: no-repeat;*/
-    background: url(./sp_search.png) -4px -10px no-repeat;
+    background: url(./sp_search.png) -4px -4px no-repeat;
     vertical-align: middle;
+    position: relative;
+    top: -6px;
 }
 
 #header-search h1 span {
@@ -53,12 +55,16 @@
     display: inline-block;
     border: 2px solid #03cf5d; /* hex */
     vertical-align: middle;
+    position: relative;
 }
 
 #header-search fieldset input {
     border: none;
     padding: 0;
     outline: none;
+    vertical-align: top;
+    width: 405px;
+    height: 23px;
 }
 
 #header-search fieldset button {
@@ -67,6 +73,9 @@
     border: none;
     padding: 0;
     background: #03cf5d;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 #search-image {
