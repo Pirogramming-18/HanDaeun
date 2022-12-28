@@ -379,7 +379,6 @@ main {
 
 #main-login .login-wrapper a {
     display: block;
-
 }
 
 #main-login .login-text {
@@ -473,7 +472,7 @@ main {
     transform: translateY(-50%);
 }
 
-#main-weather{
+#main-weather {
     display: inline-block;
     width: 332px;
     height: 142px;
@@ -482,7 +481,7 @@ main {
     vertical-align: top;
 }
 
-#main-second-ad{
+#main-second-ad {
     display: inline-block;
     width: 332px;
     height: 150px;
@@ -490,7 +489,7 @@ main {
     vertical-align: top;
 }
 
-#main-category{
+#main-category {
     float: left;
     width: 740px;
     height: 882px;
@@ -499,7 +498,7 @@ main {
     margin-right: 8px;
 }
 
-#main-shopping{
+#main-shopping {
     float: left;
     width: 330px;
     height: 882px;
@@ -507,19 +506,19 @@ main {
     margin-bottom: 8px;
 }
 
-#main-shopping iframe{
+#main-shopping iframe {
     width: 100%;
     height: 100%;
 }
 
 #main-third-block,
-#main-fourth-block{
+#main-fourth-block {
     display: inline-block;
     width: 100%;
     vertical-align: top;
 }
 
-#main-event{
+#main-event {
     float: left;
     width: 740px;
     height: 130px;
@@ -528,9 +527,76 @@ main {
     margin-right: 8px;
 }
 
-#main-third-ad{
+#main-third-ad {
     float: left;
     width: 330px;
     height: 130px;
     background-color: #555
+}
+
+#main-category-top {
+    display : inline-block;
+    width: 100%;
+    border-bottom: 1px solid #ebeef3;
+}
+
+#subject-list, #subject-all, #subject-prev, #subject-next {
+    float: left;
+    height: 45px;
+}
+
+#subject-list {
+    width: 603px;
+}
+
+#subject-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#subject-list li {
+    float: left;
+}
+
+#subject-all, #subject-prev, #subject-next {
+    position: relative;
+    width: 45px;
+    border: none;
+    border-left: 1px solid #ebeef3;
+    background: white;
+
+}
+
+#subject-all span:last-child {
+    position: absolute;
+    top: 15px;
+    left: 16px;
+    width: 8px;
+    height: 16px;
+    background-image: url(./sp_themecast.png);
+    background-repeat: no-repeat;
+    background-position: -218px -257px;
+}
+
+#subject-prev span:last-child {
+    position: absolute;
+    top: 15px;
+    left: 16px;
+    width: 8px;
+    height: 16px;
+    background-image: url(./sp_themecast.png);
+    background-repeat: no-repeat;
+    background-position: -320px 0;
+}
+
+#subject-next span:last-child {
+    position: absolute;
+    top: 15px;
+    left: 16px;
+    width: 8px;
+    height: 16px;
+    background-image: url(./sp_themecast.png);
+    background-repeat: no-repeat;
+    background-position: -320px -52px;
 }
