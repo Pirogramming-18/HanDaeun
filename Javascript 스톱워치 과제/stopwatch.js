@@ -10,8 +10,8 @@ const Reset = document.getElementById("reset");
 
 let intervalId;
 
-const Delete=document.querySelector('#delete');
-const All=document.querySelector('#checkAll');
+const Delete = document.querySelector('#delete');
+const All = document.querySelector('#all');
 
 Start.onclick = function(){
     clearInterval(intervalId)
@@ -91,5 +91,4 @@ function deleted(){
     for (var i in checkbox){
         if(checkbox[i].checked) list.removeChild(checkbox[i].parentNode.parentNode);
     }
-
 }
