@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stopwatch</title>
+    <style>
+        * {
+            text-align: center;
+        }
+
+        .top {
+            margin-top: 10vh;
+        }
+
+        .inline {
+            display: inline-flex;
+            margin-top: 2vh;
+        }
+    </style>
+</head>
+<body>
+    <section class="top">
+        <b>⏱피로그래밍 스톱워치</b>
+    </section>
+    <section>
+        <div>
+            <h1><span id="seconds">00</span>:<span id="milliseconds">00</span></h1>
+        </div>
+        <div>
+            <button id="start">start</button>
+            <button id="stop">stop</button>
+            <button id="reset">reset</button>
+        </div>
+    </section>
+
+    <section>
+        <div class=" inline">
+            <table>
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" id="checkAll"></th>
+                        <th>구간기록</th>
+                        <th><button id="delete">delete</button></th>
+                    </tr>       
+                </thead>
+                <tbody id="body">
+                    <tr>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <script src="stopwatch.js"></script>
+</body>
+</html>
