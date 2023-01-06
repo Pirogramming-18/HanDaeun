@@ -18,6 +18,7 @@ while(True):
         print("playerA :", num+1)
         start += 1
         if (start >= 31):
+            print('playerB win!')
             break
     if (start >= 31):
             break
@@ -38,6 +39,7 @@ while(True):
         print("playerB :", num+1)
         start += 1
         if (start >= 31):
+            print('playerA win!')
             break
     if (start >= 31):
             break
