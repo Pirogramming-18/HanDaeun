@@ -1,3 +1,5 @@
+import random
+
 num = 0
 start = 0
 
@@ -16,13 +18,13 @@ def brGame():
     return numm
     
 while(True):
-    numm = brGame()
+    numm = random.randint(1, 3)
     
     for num in range(start, start+numm):
-        print("playerA :", num+1)
+        print("computer :", num+1)
         start += 1
         if (start >= 31):
-            print('playerB win!')
+            print('player win!')
             break
     if (start >= 31):
             break
@@ -30,10 +32,10 @@ while(True):
     numm = brGame()
 
     for num in range(start, start+numm):
-        print("playerB :", num+1)
+        print("player :", num+1)
         start += 1
         if (start >= 31):
-            print('playerA win!')
+            print('computer win!')
             break
     if (start >= 31):
             break
