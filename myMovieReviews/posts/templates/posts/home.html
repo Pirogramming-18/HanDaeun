@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>홈 화면</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="/" style="text-decoration: none" >my Movie reviews</a></h1>
+        </div>     
+        <hr />
+        {% for post in posts %}
+        <div>
+            <h1><a href="/post/{{post.id}}" style="text-decoration: none">{{post.title}}</a></h1>
+            <p>개봉년도 {{post.year}}년</p>
+            <p>장르  {{post.genre}}</p>
+            <p>별점  {{post.star}}</p>
+        </div>
+        {% endfor %}
+
+        <a href="/create">Add a New review</a>
+    </body>
+</html>

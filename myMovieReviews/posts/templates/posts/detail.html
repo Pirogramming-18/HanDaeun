@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>상세 화면</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="/" style="text-decoration: none" >my Movie reviews</a></h1>
+        </div> 
+        <hr />
+        <h2>{{post.title}}</h2>
+        <p>개봉년도 {{post.year}}년</p>
+        <p>감독 {{post.director}}</p>
+        <p>주연 {{post.actor}}</p>
+        <p>장르 {{post.genre}}</p>
+        <p>별점 {{post.star}}점</p>
+        <p>러닝 타임 {{post.running}}분</p>
+        <div>{{post.review}}</div>
+        <br />
+        <div><a href="/update/{{post.id}}" style="text-decoration: none">수정</a></div>
+        <div><a href="/delete/{{post.id}}" style="text-decoration: none">삭제</a></div>
+    </body>
+</html>

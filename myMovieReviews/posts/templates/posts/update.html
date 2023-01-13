@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>수정</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="/" style="text-decoration: none" >my Movie reviews</a></h1>
+        </div> 
+        <hr />
+        <form action="/update/{{post.id}}" method="post">
+            {% csrf_token %}
+            <p>제목: <input type="text" name="title" value="{{post.title}}"/></p>
+            <p>개봉년도: <input type="number" name="year" value="{{post.year}}"/></p>
+            <p>장르: <input type="text" name="genre" value="{{post.genre}}"/></p>
+            <p>별점: <input type="number" step="0.01" name="star" value="{{post.star}}"/></p>
+            <p>러닝타임: <input type="number" name="running" value="{{post.running}}"/></p>
+            <div>리뷰:<br/>
+                <textarea name="review" id="" cols="60" rows="10">{{post.review}}</textarea>
+            </div>
+            <p>감독: <input type="text" name="director" value="{{post.director}}"/></p>
+            <p>배우: <input type="text" name="actor" value="{{post.actor}}"/></p>
+            <div>
+                <input type="submit" value="Save" />
+                <a href="/">
+            </div>
+        </form>
+    </body>
+</html>
