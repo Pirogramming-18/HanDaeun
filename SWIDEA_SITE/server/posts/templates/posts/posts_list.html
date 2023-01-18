@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+    {% load static %}
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>메인페이지</title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        <nav>
+            <a href="{% url 'posts:create' %}">아이디어 등록</a>
+            <a href="{% url 'posts:list' %}">아이디어 관리</a>
+            <a href="{% url 'posts:tool_create' %}">개발툴 등록</a>
+            <a href="{% url 'posts:tool_list' %}">개발툴 관리</a>
+        </nav>
+        <main>
+            <h1>Idea List</h1>
+            <a>정렬기준</a>
+            {% for post in posts %}
+            <div>
+                {% if post.photo %}
+                    <p>
+                        <img src="{{ post.photo.url }}" width=200 />
+                    </p>
+                {% endif %}
+                <p><a href="{% url 'posts:retrieve' post.id %}">{{post.title}}</a></p>
+                <p>예상 개발 툴 : {{post.devtool}}</p>
+                <p>아이디어 관심도 : {{post.interest}}</p>
+            </div>
+            {% endfor %}
+        </main>
+    </body>
+</html>

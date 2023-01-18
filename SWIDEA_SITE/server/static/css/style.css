@@ -1,0 +1,10 @@
+* {
+  text-align: center;
+}
+nav {
+  display: inline-flex;
+}
+nav a {
+  text-decoration: none;
+  margin-right: 2vh;
+}

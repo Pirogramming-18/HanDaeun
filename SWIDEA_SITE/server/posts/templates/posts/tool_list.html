@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+    {% load static %}
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>개발툴 관리페이지</title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        <nav>
+            <a href="{% url 'posts:create' %}">아이디어 등록</a>
+            <a href="{% url 'posts:list' %}">아이디어 관리</a>
+            <a href="{% url 'posts:tool_create' %}">개발툴 등록</a>
+            <a href="{% url 'posts:tool_list' %}">개발툴 관리</a>
+        </nav>
+        <main>
+            <h1>DevTool List</h1>
+            {% for post in posts %}
+            <div>
+                <p><a href="{% url 'posts:tool_retrieve' post.id %}">{{post.name}}</a></p>
+                <p>{{post.kind}}</p>
+                <p>{{post.content}}</p>
+            </div>
+            {% endfor %}
+        </main>
+    </body>
+</html>
