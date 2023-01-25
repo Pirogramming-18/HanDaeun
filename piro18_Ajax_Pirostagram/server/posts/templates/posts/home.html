@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>홈 화면</title>
+        <script src="https://kit.fontawesome.com/6fbcf91afd.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        {% for post in posts %}
+            <div class="post-id-{{ post.id }}">
+                <div>{{ post.title }}</div>
+                <div>{{ post.content}}</div>
+                <div id="like">
+                    {% if post.like %}
+                    <i class="fa-solid fa-heart"
+                    onclick="onClickLike({{ post.id }}, 'dislike')"
+                    ></i>
+                    {%else%}
+                    <i class="fa-regular fa-heart"
+                    onclick="onClickLike({{ post.id }}, 'like')"
+                    ></i>
+                    {%endif%}
+                </div>
+            </div>
+        {% endfor %}
+    </body>
+</html>
+
+<script>
+    const requestLike = new XMLHttpRequest();
+
+    const onClickLike = (id, type) => {
+        const url = "/like_ajax/";
+        requestLike.open("POST", url, true);
+        requestLike.setRequestHeader(
+            "Content-Type",
+            "application/x-www-form-urlencoded"
+        );
+        requestLike.send(JSON.stringify({id: id, type: type}));
+    };
+
+    requestLike.onreadystatechange = () => {
+        if (requestLike.readyState === XMLHttpRequest.DONE) {
+        if (requestLike.status < 400) {
+            const { id, type } = JSON.parse(requestLike.response); 
+            const element = document.querySelector(`.post-id-${id} #like`);
+            if( type == 'like' ) {
+                element.innerHTML = `<i class="fa-solid fa-heart" onclick="onClickLike(${id}, 'dislike')"></i>`
+            }
+            else {
+                element.innerHTML = `<i class="far fa-heart" onclick="onClickLike(${id}, 'like')"></i>`
+            }
+        }
+    }
+};
+</script>
